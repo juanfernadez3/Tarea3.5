@@ -1,0 +1,29 @@
+﻿<Window x:Class="RegistroInscripcion1.UI.consultas.FormConsultaInscripciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroInscripcion1.UI.consultas"
+        mc:Ignorable="d"
+          Title="FormConsultaInscripciones" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid Name="ConsultaDataGridView" Margin="0,46,0,35"/>
+        <Button Name="ButtonConsultarInscripcion" Content="Consultar" Margin="490,4,207,400" Click="ButtonConsultarInscripcion_Click" Grid.Row="0"/>
+        <TextBox Name="TextBoxCriterio" HorizontalAlignment="Left" Margin="291,10,0,400" Width="154" Grid.Row="0"/>
+        <Label Content="Criterios" Margin="230,8,509,400" Grid.Row="0"/>
+
+        <Label Content="Filtrar" Margin="19,8,720,400" Grid.Row="0"/>
+
+        <ComboBox Name="FiltrarComboBox" Height="25" Grid.Row="0" Margin="65,9,600,400" >
+            <ComboBoxItem Content="TODO"></ComboBoxItem>
+            <ComboBoxItem Content="IncripcionId"></ComboBoxItem>
+            <ComboBoxItem Content="EstudianteId"></ComboBoxItem>
+            <ComboBoxItem Content="Monto"></ComboBoxItem>
+            <ComboBoxItem Content="Balance"></ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>

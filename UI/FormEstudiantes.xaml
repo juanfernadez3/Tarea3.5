@@ -1,0 +1,68 @@
+﻿<Window x:Class="RegistroInscripcion1.UI.FormEstudiantes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroInscripcion1.UI"
+        mc:Ignorable="d"
+       Title="FormEstudiantes" Height="348" Width="498" Background="LightGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Label Content="PersonaId" FontSize="20" FontFamily="Times New Roman"></Label>
+            <Label Content="Nombre: " FontSize="20" FontFamily="Times New Roman"></Label>
+            <Label Content="Cédula: " FontSize="20" FontFamily="Times New Roman" ></Label>
+            <Label Content="Teléfono: " FontSize="20" FontFamily="Times New Roman"></Label>
+            <Label Content="Dirección: " FontSize="20" FontFamily="Times New Roman"></Label>
+            <Label Content="Fecha Nacimiento: " FontSize="20" FontFamily="Times New Roman" ></Label>
+            <Label Content="Balance: " FontSize="20" FontFamily="Times New Roman" />
+        </StackPanel>
+
+        <TextBox Name="EstudianteIDTextBox"  Text="0" HorizontalContentAlignment="Center" Height="20" Grid.Row="0" Margin="1,5,99,206" Grid.Column="1"/>
+        <TextBox Name="NombreTextBox"  Height="20" Margin="1,39,99,172" Grid.Column="1"/>
+        <TextBox Name="CedulaTextBox"  Height="21" Margin="1,71,99,139" Grid.Column="1"/>
+        <TextBox Name="TelefonoTextBox" Height="21" Margin="1,105,99,105" Grid.Column="1"/>
+        <TextBox Name="DireccionTextBox" Height="21" Margin="0,138,99,73" Grid.Column="1"/>
+        <DatePicker Name="FechaNacimientoDatePicker" Margin="0,174,99,49" Grid.Column="1"/>
+
+        <Button Name="ButtonNuevo" Content="Nuevo" HorizontalContentAlignment="Right" 
+                Height="50" Margin="18,253,33,-59" FontSize="20" Click="ButtonNuevo_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="nuevo.png" AlignmentX="Left"/>
+            </Button.Background>
+
+        </Button>
+
+        <Button Name="ButtonGuardar" Content="Guardar" HorizontalContentAlignment="Right" 
+                Height="50" Margin="7,254,117,-57" FontSize="20" Grid.Column="1" Click="ButtonGuardar_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="guardar.png" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+
+        <Button Name="ButtonEliminar" Content="Eliminar" HorizontalContentAlignment="Right" 
+                Height="50" Margin="145,253,-22,-59" FontSize="20" Grid.Column="1" Click="ButtonEliminar_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="eliminar.png" AlignmentX="Left"/>
+            </Button.Background>
+
+        </Button>
+
+        <Button Name="ButtonBuscar" Content="Buscar" HorizontalContentAlignment="Right" Margin="162,6,-5,207" FontSize="20" Grid.Column="1" Click="ButtonBuscar_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="buscar.png" AlignmentX="Left"/>
+            </Button.Background>
+
+        </Button>
+        <TextBox Name="TextBoxBalance"  Text="0" HorizontalContentAlignment="Center"  IsReadOnly="True" Height="21" Margin="0,203,99,9" Grid.Column="1"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,63 @@
+﻿<Window x:Class="RegistroInscripcion1.UI.FormInscripciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroInscripcion1.UI"
+        mc:Ignorable="d"
+        Title="FormInscripciones" Height="304" Width="460" Background="LightGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,0,46">
+            <Label Content="InscripcionId" FontSize="20" FontFamily="Times New Roman"></Label>
+            <Label Content="Fecha inscripción: " FontSize="20" FontFamily="Times New Roman"></Label>
+            <Label Content="PersonaId: " FontSize="20" FontFamily="Times New Roman" ></Label>
+            <Label Content="Comentario: " FontSize="20" FontFamily="Times New Roman"></Label>
+            <Label Content="Monto: " FontSize="20" FontFamily="Times New Roman"></Label>
+            <Label Content="Balance: " FontSize="20" FontFamily="Times New Roman" ></Label>
+
+        </StackPanel>
+
+        <TextBox Name="TextBoxInscripcionesId"  Text="0" HorizontalContentAlignment="Center" Grid.Row="0" Margin="1,6,151,243" Grid.Column="1"/>
+        <DatePicker Name="DatePickerFechaInscripcion" Margin="1,38,41,203" Grid.Column="1" RenderTransformOrigin="0.499,0.092"/>
+        <TextBox Name="TextBoxPersonaId"  Text="0" HorizontalContentAlignment="Center" Grid.Row="0" Margin="162,73,42,177" Grid.ColumnSpan="2"/>
+        <TextBox Name="TextBoxComentario"  Grid.Row="0" Margin="1,104,41,144" Grid.Column="1"/>
+        <TextBox Name="TextBoxMonto"  Margin="1,138,42,113" Grid.Column="1"/>
+        <TextBox Name="TextBoxBalance" HorizontalContentAlignment="Center"  Margin="162,175,41,76" Grid.ColumnSpan="2"/>
+        <Button Name="ButtonNuevo" Content="Nuevo" HorizontalContentAlignment="Right" 
+                Height="50" Margin="2,214,48,13" FontSize="20" Click="ButtonNuevo_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="nuevo.png" TileMode="FlipX" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+
+        <Button Name="ButtonGuardar" Content="Guardar" HorizontalContentAlignment="Right" 
+                Height="50" Margin="154,214,155,13" FontSize="20" Click="ButtonGuardar_Click_1" Grid.ColumnSpan="2" >
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="guardar.png" TileMode="FlipX" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+
+        <Button Name="ButtonEliminar" Content="Eliminar" HorizontalContentAlignment="Right" 
+                Height="50" Margin="140,214,0,13" FontSize="20" Grid.Column="1" HorizontalAlignment="Left" Width="133" Click="ButtonEliminar_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="eliminar.png" TileMode="FlipX" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+
+        <Button Name="ButtonBuscar" Content="Buscar" HorizontalContentAlignment="Right" Margin="134,1,47,241" FontSize="20" Grid.Column="1" Click="ButtonBuscar_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="buscar.png" TileMode="FlipX" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
